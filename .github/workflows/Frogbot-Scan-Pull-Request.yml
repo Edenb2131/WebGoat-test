@@ -18,12 +18,7 @@ jobs:
     environment: frogbot
 
     steps:
-    - run: |
-        # Specify the version you want to download
-        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.23.4/getFrogbot.sh" | sh -s 2.23.4
-  
-        # Assuming that the frogbot command is available after running the above script
-        ./frogbot scan-repository
+    - uses: jfrog/frogbot@139f3e3d1e286c219aa8ede9a2a2426ea2f158a3
       env:
         # [Mandatory]
         # JFrog platform URL
