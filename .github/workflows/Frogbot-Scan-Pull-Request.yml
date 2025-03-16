@@ -18,7 +18,7 @@ jobs:
     environment: frogbot
 
     steps:
-    - uses: jfrog/frogbot@139f3e3d1e286c219aa8ede9a2a2426ea2f158a3
+    - uses: jfrog/frogbot@v2.23.4
       env:
         # [Mandatory]
         # JFrog platform URL
