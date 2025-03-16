@@ -45,3 +45,4 @@ jobs:
         JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # [Mandatory if using OIDC authentication protocol instead of JF_ACCESS_TOKEN]
         # oidc-provider-name: ""
+        JF_WATCHES: amit
