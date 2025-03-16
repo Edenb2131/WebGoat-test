@@ -21,7 +21,7 @@ jobs:
     - name: Download Frogbot
       run: |
         # Specify the version you want to download
-        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.24.1/getFrogbot.sh" | sh -s 2.24.1  
+        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.25.0/getFrogbot.sh" | sh -s 2.25.0  
     
     - name: Run Frogbot Scan
       run: |
