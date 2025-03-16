@@ -17,6 +17,21 @@ jobs:
     # Any GitHub user who is associated with the "frogbot" GitHub environment can approve the pull request to be scanned.
     environment: frogbot
 
+    steps:
+    - name: Download Frogbot
+      run: |
+        # Specify the version you want to download
+        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.24.1/getFrogbot.sh" | sh -s 2.24.1  
+    
+    - name: Run Frogbot Scan
+      run: |
+        # Assuming that the frogbot command is available after running the above script
+        ./frogbot cfpr
+      env:
+        # [Mandatory]
+        # JFrog platform URL
+        JF_URL: ${{ secrets.JF_URL }}
+
         # [Mandatory if JF_USER and JF_PASSWORD are not provided]
         # JFrog access token with 'read' permissions on Xray service
         JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
