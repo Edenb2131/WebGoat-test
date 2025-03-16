@@ -21,12 +21,12 @@ jobs:
     - name: Download Frogbot
       run: |
         # Specify the version you want to download
-        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.24.1/getFrogbot.sh" | sh -s 2.24.1  
+        curl -fLg "https://releases.jfrog.io/artifactory/frogbot/v2/2.23.4/getFrogbot.sh" | sh -s 2.23.4  
     
     - name: Run Frogbot Scan
       run: |
         # Assuming that the frogbot command is available after running the above script
-        ./frogbot cfpr
+        ./frogbot scan-repository
       env:
         # [Mandatory]
         # JFrog platform URL
