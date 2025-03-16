@@ -36,7 +36,7 @@ jobs:
             JF_GIT_TOKEN: $(JF_GIT_TOKEN)
             
             # [Optional] Xray Watches (ensure proper JSON format)
-            JF_WATCHES: "[\"amit\"]"
+            JF_WATCHES: ["amit"]
 
             # [Optional, default: "FALSE"]
             JF_FAIL: "FALSE"
