@@ -43,5 +43,6 @@ jobs:
         # [Mandatory]
         # The GitHub token is automatically generated for the job
         JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        JF_GIT_PROVIDER: github
         # [Mandatory if using OIDC authentication protocol instead of JF_ACCESS_TOKEN]
         # oidc-provider-name: ""
